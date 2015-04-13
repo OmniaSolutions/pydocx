@@ -107,7 +107,15 @@ class Document(ElementProxy):
         properties of this document.
         """
         return self._part.core_properties
-
+    
+    @property
+    def custom_properties(self):
+        """
+        A| CustomProperties| object providing read/write access to the 
+        custom properties of this document
+        """
+        return self._part.custom_properties
+    
     @property
     def inline_shapes(self):
         """

@@ -74,6 +74,9 @@ class CONTENT_TYPE(object):
     OFC_VML_DRAWING = (
         'application/vnd.openxmlformats-officedocument.vmlDrawing'
     )
+    OPC_CUSTOM_PROPERTIES=(
+        'application/vnd.openxmlformats-officedocument.custom-properties+xml'   
+    )
     OPC_CORE_PROPERTIES = (
         'application/vnd.openxmlformats-package.core-properties+xml'
     )

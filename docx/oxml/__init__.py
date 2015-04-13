@@ -66,6 +66,9 @@ def OxmlElement(nsptag_str, attrs=None, nsdecls=None):
 
 from .shared import CT_DecimalNumber, CT_OnOff, CT_String
 
+from .customprops import CT_intValue,CT_strValue
+register_element_cls('vt:lpwstr',CT_strValue)
+register_element_cls('vt:i4',CT_intValue)
 
 from .coreprops import CT_CoreProperties
 register_element_cls('cp:coreProperties', CT_CoreProperties)
