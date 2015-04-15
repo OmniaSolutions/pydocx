@@ -116,6 +116,25 @@ class Document(ElementProxy):
         """
         return self._part.custom_properties
     
+    def updateAllProps(self):
+        """
+            update all the custom property to the drawing
+        """
+        prop_name='{http://schemas.openxmlformats.org/wordprocessingml/2006/main}instr'
+        names=dict([(str(p.name).upper(),p) for p in self.custom_properties.properties])
+                  
+        for part in self._part._element.xpath('//w:fldSimple/w:r/w:t'):
+            parent=part.getparent().getparent()
+            v=parent.attrib.get(prop_name)
+            for name in names:
+                if str(v).upper().find(name)>0:
+                    part.text=names[name].valueObj.value
+                        
+                        
+                
+                
+                
+    
     @property
     def inline_shapes(self):
         """

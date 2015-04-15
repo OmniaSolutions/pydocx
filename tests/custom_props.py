@@ -33,12 +33,16 @@ if __name__ == '__main__':
         if p.name=='DOCCOMMESSA':
             print "Value of the tmm_document",p.valueObj.value
             p.valueObj.value="arime ..."
+        elif p.name=='DOCNAME':
+            p.valueObj.value="new doc name"
+    d.updateAllProps()
     d.save(r'D:\d\OmniaSolutions\Clienti\inarca\cross reference\new_ut057_2015_0.docx')
-    d.custom_properties.newProperties('Matteo',10)
-    d.custom_properties.newProperties('Matteo1','111')
-    d.custom_properties.newProperties('Matteo2',111.00)
-    for p in d.custom_properties.properties:
-        print "--",p.name,p.valueObj.value
-    
-    d.save(r'D:\d\OmniaSolutions\Clienti\inarca\cross reference\new_pROP_ut057_2015_0.docx')
+#     d.custom_properties.newProperties('Matteo',10)
+#     d.custom_properties.newProperties('Matteo1','111')
+#     d.custom_properties.newProperties('Matteo2',111.00)
+#     for p in d.custom_properties.properties:
+#         print "--",p.name,p.valueObj.value
+#     
+#     
+#     d.save(r'D:\d\OmniaSolutions\Clienti\inarca\cross reference\new_pROP_ut057_2015_0.docx')
     pass
